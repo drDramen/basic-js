@@ -21,7 +21,8 @@ function dateSample(sampleActivity) {
   if (
     typeof sampleActivity !== 'string'
     || sampleActivity > MODERN_ACTIVITY
-    || sampleActivity < 0
+    || sampleActivity <= 0
+    || Number.isNaN(+sampleActivity)
   ) return false;
 
   const k = Math.LN2 / 5730;
